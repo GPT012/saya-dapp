@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7b61ff;
+  --secondary: #f5f5f7;
+  --accent: #00d4ff;
+  --text-primary: #1e1e1e;
+  --error: #ff4c60;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+  line-height: 1.6;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+}
+
+/* Persian text optimization */
+.persian-text {
+  font-family: "Noto Sans Arabic", system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.english-text {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Headings with better typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(123, 97, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(123, 97, 255, 0.7);
+}
+
+/* Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #7b61ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #7b61ff 0%, #00d4ff 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(123, 97, 255, 0.3);
+}
+
+/* Typography improvements */
+.text-display {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.text-heading {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-body {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.7;
+}
+
+.text-caption {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+}
+
+/* Input and form improvements */
+input,
+textarea,
+select {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+}
+
+/* Button improvements */
+button {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* Music player specific typography */
+.music-title {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.music-artist {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Card typography */
+.card-title {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.card-description {
+  font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Focus improvements */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #7b61ff;
+  outline-offset: 2px;
+}
+
+/* Better Persian text rendering */
+.persian-optimized {
+  font-family: "Noto Sans Arabic", system-ui, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* English text optimization */
+.english-optimized {
+  font-family: "Inter", system-ui, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
